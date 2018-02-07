@@ -12,7 +12,14 @@ function initMap() {
   position: location,
   map: map
   });
-}  
+
+  var inputPartida = document.getElementById('startingPoint');
+  var inputDestino = document.getElementById('destination');
+
+  new google.maps.places.Autocomplete(inputPartida);
+  new google.maps.places.Autocomplete(inputDestino);
+};
+
 
 function search () {
   if(navigator.geolocation) {
@@ -35,11 +42,6 @@ var success = function getLocationSuccess (position) {
   /*map.setZoom(16);
   map.setCenter(position);*/
 
-var inputPartida = document.getElementById('startingPoint');
-var inputDestino = document.getElementById('destination');
-
-new google.maps.places.Autocomplete(inputPartida);
-new google.maps.places.Autocomplete(inputDestino);
 
 }
 
