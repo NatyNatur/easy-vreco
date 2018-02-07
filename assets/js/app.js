@@ -1,9 +1,9 @@
 var latitude, longitude;
 
-document.getElementById('encuentrame').addEventListener('click', search);
+document.getElementById('findMe').addEventListener('click', search);
 
 function initMap() {
-  var location = {lat: -25.363, lng: 131.044};
+  var location = {lat: -33.45, lng: -70.6667};
   var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 15,
   center: location
@@ -12,7 +12,14 @@ function initMap() {
   position: location,
   map: map
   });
-}  
+
+  var inputPartida = document.getElementById('startingPoint');
+  var inputDestino = document.getElementById('destination');
+
+  new google.maps.places.Autocomplete(inputPartida);
+  new google.maps.places.Autocomplete(inputDestino);
+};
+
 
 function search () {
   if(navigator.geolocation) {
@@ -25,20 +32,21 @@ var success = function getLocationSuccess (position) {
   longitude = position.coords.longitude;
   var location = {lat: latitude, lng: longitude};
   var map = new google.maps.Map(document.getElementById('map'), {
-  zoom: 15,
+  zoom: 17,
   center: location
   });
   var marker = new google.maps.Marker({
   position: location,
   map: map
   });
-  map.setZoom(18);
-  map.setCenter(position);
+  /*map.setZoom(16);
+  map.setCenter(position);*/
+
+
 }
 
 var error = function (error) {
   alert('Tenemos problemas para encontrar tu ubicación.');
 }
-
 
 
