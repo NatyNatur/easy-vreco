@@ -4,20 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Easy Vreco</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
-  <!--  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
-  <h3>Google Maps</h3>
-  <button id="encuentrame">Encuentrame</button>
+  <div class="container-fluid" id="finding">
+    <div class="row">
+      <div class="input-group" id="inpS">
+        <div class="col-xs-6 col-md-4 inputDiv">
+          <span class="input-group-addon locIcons" id="basic-addon1"><i class="fas fa-map-marker"></i></span>
+          <input type="text" placeholder="Punto de partida" class="form-control inputText" id="startingPoint">
+        </div>
+        <div class="col-xs-6 col-md-4 inputDiv">
+          <span class="input-group-addon locIcons" id="basic-addon1"><i class="fas fa-location-arrow"></i></span>
+          <input type="text" placeholder="Destino" class="form-control inputText" id="destination">
+        </div>
+        <div class="col-xs-2">
+          <button id="findMe">Encuéntrame</button>
+        </div>
+        <div class="col-xs-2">
+          <button id="goTo">Trazar ruta</button>
+        </div>
+      </div> <!-- cierro #inpS -->
+    </div> <!-- cierro .row -->
+  </div> <!-- cierro #finding -->
   <div id="map">
     
   </div>
 
  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXR4qDm0AGC4jjGPTmFk9sioGgjOXnmEE&callback=initMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXR4qDm0AGC4jjGPTmFk9sioGgjOXnmEE&callback=initMap&libraries=places"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
