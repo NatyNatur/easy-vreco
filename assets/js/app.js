@@ -35,7 +35,7 @@ var success = function getLocationSuccess(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
 
-  var imgMarker = 'http://www.gps-routes.co.uk/routes/home.nsf/cycleicon.png';
+  var imgMarker = '../images/icon-bicycle.png';
   var location = {
     lat: latitude,
     lng: longitude
@@ -51,8 +51,6 @@ var success = function getLocationSuccess(position) {
     map: map,
     icon: imgMarker
   });
-  /* map.setZoom(16);
-  map.setCenter(position);*/
 
 
   var inputPartida = document.getElementById('startingPoint');
