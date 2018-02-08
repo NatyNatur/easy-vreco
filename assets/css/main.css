@@ -1,11 +1,9 @@
 #finding {
   width: 100%;
-  height: auto;
-  padding: 0;
-  background: -moz-linear-gradient(to bottom left,#60b68a,#cc7b52);
-  background: -webkit-linear-gradient(to bottom left,#60b68a, #cc7b52);
-  background: -o-linear-gradient(to bottom left,#60b68a, #cc7b52);
-  background: linear-gradient(to bottom left,#60b68a, #cc7b52);
+  background: -moz-linear-gradient(to left,#6f2f79, #5d79d3);
+  background: -webkit-linear-gradient(to left, #6f2f79, #5d79d3 );
+  background: -o-linear-gradient(to  left,#6f2f79, #5d79d3 );
+  background: linear-gradient(to left, #6f2f79, #5d79d3 );
 }
 
 #map {
@@ -43,7 +41,7 @@
 }
 
 #findMe, #goTo {
-  background-color: #FFF;
+  background-color: #fff;
   color: #000;
   border: none;
   padding: 0.4em 0.8em;
@@ -52,5 +50,6 @@
 }
 
 .btn-controls {
-  padding: 0.4em;
+  padding: 0.5em 0 0 0;
+  text-align: center;
 }
