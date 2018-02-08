@@ -35,7 +35,7 @@ var success = function getLocationSuccess(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
 
-  var imgMarker = '../images/icon-bicycle.png';
+  var imgMarker = 'https://raw.githubusercontent.com/tamybl/easy-vreco/master/assets/images/icon-bicycle.png';
   var location = {
     lat: latitude,
     lng: longitude
